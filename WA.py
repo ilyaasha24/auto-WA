@@ -4,14 +4,14 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
 opt = Options()
-opt.add_argument("--user-data-dir=C:\\Users\\hp\\AppData\\Local\\Google\\Chrome\\User Data")
+#opt.add_argument("--user-data-dir=C:\\Users\\hp\\AppData\\Local\\Google\\Chrome\\User Data")
 opt.add_argument("--disable-extensions")
 opt.add_argument("--app=https://web.whatsapp.com")
 
 response = {
   "hai": "hai juga",
   "Hai": "Hai Juga",
-  "HAI": "HAI JUGA!",
+  "HAI": "NGGAK USAH NGEGAS, BAMBANG!",
   "HELP": "Daftar Command:\n1. hai/Hai/HAI\n2. REGISTER\n3. SHOW\n4. HELP",
 }
 
@@ -22,12 +22,12 @@ def pm(msg):
 
 db = []
 
-driver = webdriver.Chrome(executable_path="D:\\Program Files\\nodejs\\chromedriver.exe", options=opt)
+driver = webdriver.Chrome(executable_path="<path>/chromedriver.exe", options=opt)
 
-rcv = '+62 838-9526-2500'
-snd = 'Ilya Asha'
+rcv = 'receiver name/phone number'
+snd = 'sender name'
 
-raw_input('Press Start to Continue')
+raw_input('Press Enter after Whatsapp web loaded to Continue')
 
 user = driver.find_element_by_xpath('//span[@title = "{}"]'.format(rcv))
 user.click()
