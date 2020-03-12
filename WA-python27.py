@@ -22,10 +22,10 @@ def pm(msg):
 
 db = []
 
-driver = webdriver.Chrome(executable_path="<path>/chromedriver.exe", options=opt)
+driver = webdriver.Chrome(executable_path="<path to your chromedriver>", options=opt)
 
-rcv = 'receiver name/phone number'
-snd = 'sender name'
+rcv = '<receiver name/phone number>'
+snd = '<sender name>'
 
 raw_input('Press Enter after Whatsapp web loaded to Continue')
 
